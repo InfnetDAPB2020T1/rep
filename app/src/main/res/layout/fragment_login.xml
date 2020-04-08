@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="@color/colorBack1"
     tools:context=".FragmentsInicial.LoginFragment">
 
     <Button
@@ -13,11 +13,12 @@
         android:layout_height="49dp"
         android:background="@drawable/btn_shape1"
         android:text="Acessar"
+        android:textColor="@color/colorBack1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintVertical_bias="0.865" />
 
     <EditText
         android:id="@+id/edt_usuario_login"
@@ -29,8 +30,8 @@
         android:hint="Usuario"
         android:inputType="textPersonName"
         android:paddingLeft="50dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,8 +49,8 @@
         android:hint="Senha"
         android:inputType="textPassword"
         android:paddingLeft="50dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,35 +99,49 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.957" />
+        app:layout_constraintVertical_bias="0.976" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animation2"
+        android:id="@+id/anim_edt_usuario_login"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_usuario_login"
         app:layout_constraintEnd_toEndOf="@+id/edt_usuario_login"
-        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="@+id/edt_usuario_login"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.567"
+        app:layout_constraintTop_toTopOf="@+id/edt_usuario_login"
+        app:layout_constraintVertical_bias="0.526"
         app:lottie_autoPlay="false"
         app:lottie_fileName="lf30_editor_hsMmb6.json"
         app:lottie_loop="false" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animation3"
+        android:id="@+id/anim_usuarioInvalido_login"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_acessar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_senha_login"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="lf30_editor_YB5Nbk.json"
+        app:lottie_loop="false" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim_edt_senha_login"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_senha_login"
         app:layout_constraintEnd_toEndOf="@+id/edt_senha_login"
-        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="@+id/edt_senha_login"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.686"
+        app:layout_constraintTop_toTopOf="@+id/edt_senha_login"
         app:lottie_autoPlay="false"
         app:lottie_fileName="lf30_editor_hsMmb6.json"
         app:lottie_loop="false" />
+
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -145,12 +160,28 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:src="@drawable/ic_vpn_key_black_24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_senha_login"
         app:layout_constraintEnd_toEndOf="@+id/edt_senha_login"
-        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="@+id/edt_senha_login"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.688" />
+        app:layout_constraintTop_toTopOf="@+id/edt_senha_login"
+        app:layout_constraintVertical_bias="0.558" />
+
+    <TextView
+        android:id="@+id/txt_usuario_invalido_login"
+        android:layout_width="128dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="Usuario invalido"
+        android:textColor="@color/colorAccent3"
+        android:textSize="17dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_acessar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/anim_usuarioInvalido_login"
+        app:layout_constraintTop_toBottomOf="@+id/edt_senha_login"
+        app:layout_constraintVertical_bias="0.533" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,9 @@ import androidx.core.graphics.alpha
 import androidx.navigation.fragment.findNavController
 
 import com.example.projpaint3.R
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_carregamento.*
+import kotlinx.android.synthetic.main.fragment_login.*
 
 /**
  * A simple [Fragment] subclass.
