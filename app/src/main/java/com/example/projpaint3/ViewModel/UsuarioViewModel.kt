@@ -5,8 +5,9 @@ import androidx.lifecycle.ViewModel
 import com.example.projpaint3.Model.Local
 import com.example.projpaint3.Model.Usuario
 
-class UsuarioViewModel(
+class UsuarioViewModel : ViewModel(){
+    var usuario : Usuario? = null
+}
 
-    var usuarioViewModel : MutableLiveData<Usuario>
 
-) : ViewModel()
+

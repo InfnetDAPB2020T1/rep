@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.865" />
+        app:layout_constraintVertical_bias="0.873" />
 
     <EditText
         android:id="@+id/edt_usuario_login"
@@ -98,8 +98,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_acessar"
+        app:layout_constraintVertical_bias="0.333" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/anim_edt_usuario_login"
@@ -140,8 +140,6 @@
         app:lottie_autoPlay="false"
         app:lottie_fileName="lf30_editor_hsMmb6.json"
         app:lottie_loop="false" />
-
-
 
     <ImageView
         android:id="@+id/imageView2"

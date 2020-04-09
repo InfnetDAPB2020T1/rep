@@ -11,19 +11,24 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.core.view.isInvisible
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.airbnb.lottie.LottieComposition
 import com.airbnb.lottie.LottieCompositionFactory
 import com.example.projpaint3.Main2Activity
 
 import com.example.projpaint3.R
+import com.example.projpaint3.ViewModel.UsuarioViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
+import java.lang.Exception
 import kotlin.concurrent.timer
 
 /**
  * A simple [Fragment] subclass.
  */
 class LoginFragment : Fragment() {
+
+    private lateinit var usuarioViewModel: UsuarioViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,6 +43,16 @@ class LoginFragment : Fragment() {
 
         anim_usuarioInvalido_login.isInvisible = true
 
+        activity?.let{
+            usuarioViewModel = ViewModelProviders.of(it).get(UsuarioViewModel::class.java)
+        }
+
+        try{
+            edt_usuario_login.setText(usuarioViewModel.usuario!!.nome.toString())
+            edt_senha_login.setText(usuarioViewModel.usuario!!.senha.toString())
+        }
+        catch(e : Exception){
+        }
 
 
 
@@ -47,17 +62,25 @@ class LoginFragment : Fragment() {
 
         btn_acessar.setOnClickListener {
 
-            if(edt_usuario_login.text.toString() == "elias" && edt_senha_login.text.toString() == "qwert"){
-                Usuario_Valido_Login()
+            try {
+                var nome = usuarioViewModel.usuario!!.nome.toString()
+                var senha = usuarioViewModel.usuario!!.senha.toString()
+
+                if(edt_usuario_login.text.toString() == nome && edt_senha_login.text.toString() == senha){
+                    Usuario_Valido_Login()
+                }
+                else{
+                    Usuario_Invalido_Login()
+                }
             }
-            else{
+            catch(e : Exception) {
                 Usuario_Invalido_Login()
             }
 
         }
     }
 
-    fun Usuario_Valido_Login(){
+    public fun Usuario_Valido_Login(){
 
         txt_usuario_invalido_login.isInvisible = true
         anim_usuarioInvalido_login.isInvisible = true

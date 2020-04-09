@@ -150,15 +150,16 @@
 
     <Button
         android:id="@+id/btn_cadastro_to_login"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/edt_usuario_cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.888" />
 
     <TextView
         android:id="@+id/txt_condicao_cadastro"
@@ -174,18 +175,19 @@
 
     <TextView
         android:id="@+id/txt_bemvindo_cadastro"
-        android:layout_width="212dp"
-        android:layout_height="75dp"
+        android:layout_width="223dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
         android:gravity="center"
         android:text="Crie sua conta"
-        android:textSize="28dp"
+        android:textSize="32dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/edt_usuario_cadastro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.888" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/anim_edt_usuario_cadastro"
