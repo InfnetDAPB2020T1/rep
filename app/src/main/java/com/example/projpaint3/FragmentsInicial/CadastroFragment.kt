@@ -2,6 +2,7 @@ package com.example.projpaint3.FragmentsInicial
 
 import android.opengl.Visibility
 import android.os.Bundle
+import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -44,7 +45,7 @@ class CadastroFragment : Fragment() {
 
 //          Esse if verifica se todas os dados foram preenchidos corretamente e navega para a pagina de login
 
-            if(edt_email_cadastro.text.toString().contains("@")
+            if(Verificar_Email(edt_email_cadastro.text.toString())
                 && (edt_confirmaSenha_cadastro.text.toString() == edt_senha_cadastro.text.toString())
                 && Verificar_string(edt_senha_cadastro.text.toString())
                 && Verificar_string(edt_usuario_cadastro.text.toString())
@@ -74,6 +75,10 @@ class CadastroFragment : Fragment() {
         }
     }
 
+    fun Verificar_Email(email : String) : Boolean{
+        return Patterns.EMAIL_ADDRESS.toRegex().matches(email)
+    }
+
 
     fun Verificar_Dados_Invalidos(){
         //          Torna as animacoes invisiveis quando apertado o botao, como se estivessem sendo reiniciadas
@@ -100,7 +105,7 @@ class CadastroFragment : Fragment() {
             anim_edt_confirmarSenha_cadastro.isVisible = true
         }
 
-        if(!edt_email_cadastro.text.toString().contains("@")){
+        if(!Verificar_Email(edt_email_cadastro.text.toString())){
             anim_edt_email_cadastro.playAnimation()
             anim_edt_email_cadastro.isVisible = true
         }
