@@ -68,6 +68,8 @@ class LoginFragment : Fragment() {
 
                 if(edt_usuario_login.text.toString() == nome && edt_senha_login.text.toString() == senha){
                     Usuario_Valido_Login()
+
+
                 }
                 else{
                     Usuario_Invalido_Login()
@@ -90,6 +92,18 @@ class LoginFragment : Fragment() {
         object : CountDownTimer(500,250){
             override fun onFinish() {
                 anim_edt_senha_login.playAnimation()
+            }
+            override fun onTick(millisUntilFinished: Long) {
+            }
+
+        }.start()
+
+        object : CountDownTimer(2000,250){
+            override fun onFinish() {
+                activity?.let{
+                    var intent = Intent(it, Main2Activity::class.java)
+                    startActivity(intent)
+                }
             }
             override fun onTick(millisUntilFinished: Long) {
             }
