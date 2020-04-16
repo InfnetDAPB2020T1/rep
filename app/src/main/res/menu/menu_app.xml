@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/perfilFragment"
+        android:title="Perfil"
+        android:icon="@drawable/ic_person_black_24dp"
+        />
+
+    <item
+        android:id="@+id/eventoFragment"
+        android:title="Eventos"
+        android:icon="@drawable/ic_whatshot_black_24dp"
+        />
+
+    <item
+        android:id="@+id/localFragment"
+        android:title="Locais"
+        android:icon="@drawable/ic_place_black_24dp"
+        />
+
+<!--    <item-->
+<!--        android:id="@+id/pesquisaFragment"-->
+<!--        android:title="Busca"-->
+<!--        android:icon="@drawable/ic_search_black_24dp"-->
+<!--        />-->
+
+<!--    <item-->
+<!--        android:id="@+id/sobreFragment"-->
+<!--        android:title="Sobre"-->
+<!--        android:icon="@drawable/ic_help_black_24dp"-->
+<!--        />-->
+
+</menu>

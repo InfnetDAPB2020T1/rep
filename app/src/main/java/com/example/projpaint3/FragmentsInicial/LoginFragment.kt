@@ -1,10 +1,8 @@
 package com.example.projpaint3.FragmentsInicial
 
 import android.content.Intent
-import android.opengl.Visibility
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.text.method.TextKeyListener.clear
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,15 +11,12 @@ import android.view.animation.AnimationUtils
 import androidx.core.view.isInvisible
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
-import com.airbnb.lottie.LottieComposition
-import com.airbnb.lottie.LottieCompositionFactory
 import com.example.projpaint3.Main2Activity
 
 import com.example.projpaint3.R
 import com.example.projpaint3.ViewModel.UsuarioViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 import java.lang.Exception
-import kotlin.concurrent.timer
 
 /**
  * A simple [Fragment] subclass.
@@ -68,8 +63,6 @@ class LoginFragment : Fragment() {
 
                 if(edt_usuario_login.text.toString() == nome && edt_senha_login.text.toString() == senha){
                     Usuario_Valido_Login()
-
-
                 }
                 else{
                     Usuario_Invalido_Login()
@@ -82,7 +75,7 @@ class LoginFragment : Fragment() {
         }
     }
 
-    public fun Usuario_Valido_Login(){
+    fun Usuario_Valido_Login(){
 
         txt_usuario_invalido_login.isInvisible = true
         anim_usuarioInvalido_login.isInvisible = true
@@ -103,6 +96,7 @@ class LoginFragment : Fragment() {
                 activity?.let{
                     var intent = Intent(it, Main2Activity::class.java)
                     startActivity(intent)
+
                 }
             }
             override fun onTick(millisUntilFinished: Long) {

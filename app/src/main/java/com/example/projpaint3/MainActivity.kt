@@ -18,16 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         var usuarioViewModel = ViewModelProviders.of(this).get(UsuarioViewModel::class.java)
 
-
-
-
-
-
-
-
-
-
-
-
     }
+
+
 }

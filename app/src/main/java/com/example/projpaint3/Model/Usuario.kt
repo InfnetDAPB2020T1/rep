@@ -8,5 +8,6 @@ class Usuario(
     var icone : Int?,
     var telefone : String?,
     var partidas_ganhas : Int?,
-    var partidas_perdidas : Int?
+    var partidas_perdidas : Int?,
+    var evento_criado : Boolean = false
 )

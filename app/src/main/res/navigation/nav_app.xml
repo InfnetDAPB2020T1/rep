@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_app"
+    app:startDestination="@id/perfilFragment">
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.projpaint3.FragmentsApp.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/eventoFragment"
+        android:name="com.example.projpaint3.FragmentsApp.EventoFragment"
+        android:label="fragment_evento"
+        tools:layout="@layout/fragment_evento" />
+    <fragment
+        android:id="@+id/localFragment"
+        android:name="com.example.projpaint3.FragmentsApp.LocalFragment"
+        android:label="fragment_local"
+        tools:layout="@layout/fragment_local" />
+    <fragment
+        android:id="@+id/pesquisaFragment"
+        android:name="com.example.projpaint3.FragmentsApp.PesquisaFragment"
+        android:label="fragment_pesquisa"
+        tools:layout="@layout/fragment_pesquisa" />
+    <fragment
+        android:id="@+id/sobreFragment"
+        android:name="com.example.projpaint3.FragmentsApp.SobreFragment"
+        android:label="fragment_sobre"
+        tools:layout="@layout/fragment_sobre" />
+</navigation>
