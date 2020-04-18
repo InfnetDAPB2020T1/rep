@@ -12,6 +12,7 @@ import androidx.core.view.isInvisible
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.example.projpaint3.Main2Activity
+import com.example.projpaint3.Model.Usuario
 
 import com.example.projpaint3.R
 import com.example.projpaint3.ViewModel.UsuarioViewModel
@@ -95,6 +96,14 @@ class LoginFragment : Fragment() {
             override fun onFinish() {
                 activity?.let{
                     var intent = Intent(it, Main2Activity::class.java)
+
+                    var usuario = Usuario(
+                        1,
+                        usuarioViewModel.usuario!!.nome.toString(),
+                        usuarioViewModel.usuario!!.senha.toString(),
+                        usuarioViewModel.usuario!!.email.toString())
+
+                    intent.putExtra("usuario", usuario.toString())
                     startActivity(intent)
 
                 }
