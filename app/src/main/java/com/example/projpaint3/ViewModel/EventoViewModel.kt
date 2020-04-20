@@ -6,6 +6,6 @@ import com.example.projpaint3.Model.Evento
 
 class EventoViewModel(
 
-    var eventoViewModel: MutableLiveData<Evento>
+    var eventoViewModel: Evento
 
 ) :ViewModel()

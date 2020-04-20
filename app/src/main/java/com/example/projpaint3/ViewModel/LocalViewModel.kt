@@ -6,6 +6,6 @@ import com.example.projpaint3.Model.Local
 
 class LocalViewModel(
 
-    var localViewModel: MutableLiveData<Local>
+    var localViewModel: Local
 
 ) : ViewModel()

@@ -7,6 +7,8 @@ class Usuario(
     var nome : String,
     var senha : String,
     var email : String,
+    var localidade : String? = null,
+    var sobre : String? = null,
     var icone : Int? = null,
     var telefone : String? = null,
     var partidas_ganhas : Int? = null,
