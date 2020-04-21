@@ -29,7 +29,7 @@ class Perfil_HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btn_editar_perfil.setOnClickListener{
-            findNavController().navigate(R.id.perfil_EditFragment)
+            findNavController().navigate(R.id.action_perfil_HomeFragment_to_perfil_EditFragment)
         }
 
 

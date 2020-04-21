@@ -27,7 +27,7 @@ class Perfil_EditFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btn_confirmar_editar_perfil.setOnClickListener{
-            findNavController().navigate(R.id.perfil_HomeFragment)
+            findNavController().navigate(R.id.action_perfil_EditFragment_to_perfil_HomeFragment)
         }
     }
 }

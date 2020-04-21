@@ -1,8 +1,14 @@
 package com.example.projpaint3.Model
 
+import android.provider.ContactsContract
+import com.example.projpaint3.Throws.UsuarioEmailException
+import com.example.projpaint3.Throws.UsuarioNomeException
+import com.example.projpaint3.Throws.UsuarioSenhaException
 import java.io.Serializable
+import java.util.regex.Pattern
 
 class Usuario(
+
     var id : Int,
     var nome : String,
     var senha : String,
@@ -14,4 +20,11 @@ class Usuario(
     var partidas_ganhas : Int? = null,
     var partidas_perdidas : Int? = null,
     var evento_criado : Boolean = false
-) : Serializable
+
+) : Serializable {
+    init {
+        if (nome.length !in 4..18) throw UsuarioNomeException()
+        if (senha.length !in 4..18) throw UsuarioSenhaException()
+        if(!email.contains("@")) throw UsuarioEmailException()
+    }
+}
