@@ -10,10 +10,11 @@
     <TextView
         android:id="@+id/perfil_home_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:background="@color/colorBack2"
         android:layout_alignParentTop="true"
         android:gravity="center"
+        android:fontFamily="sans-serif-light"
         android:text="Meu perfil"
         android:textColor="@android:color/white"
         android:textSize="23dp"
@@ -30,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/perfil_home_toolbar"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="35dp"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -72,6 +73,7 @@
                     android:layout_below="@+id/rlt_lyo_ft_perfil_home"
                     android:layout_marginTop="5dp"
                     android:gravity="center_horizontal"
+                    android:fontFamily="sans-serif-light"
                     android:text="Eliasndc"
                     android:textSize="22dp"
                     android:textColor="@android:color/white"
@@ -85,6 +87,7 @@
                     android:layout_gravity="center_horizontal"
                     android:ems="10"
                     android:paddingHorizontal="50dp"
+                    android:fontFamily="sans-serif-light"
                     android:text="RJ, Botafogo"
                     android:textColor="@color/colorLight"
                     android:textAlignment="center"
@@ -96,19 +99,50 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txt_localidade_perfil"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginVertical="18dp"
+                    android:layout_marginTop="14dp"
                     android:ems="10"
                     android:inputType="textMultiLine"
+                    android:fontFamily="sans-serif-light"
                     android:paddingHorizontal="50dp"
                     android:text="À procura de amadores como eu"
                     android:textAlignment="center"
                     android:textSize="15dp" />
 
                 <LinearLayout
-                    android:id="@+id/rlt_lyo_saldo_perfil_home"
-                    android:layout_width="300dp"
-                    android:layout_height="80dp"
+                    android:id="@+id/linear_telefone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
                     android:layout_below="@id/txt_sobre_perfil"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/icone_telefone_perfil"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_phone_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/telefone_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center"
+                        android:text="( - - ) - - - - - - - - -"
+                        android:textIsSelectable="true"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rlt_lyo_saldo_perfil_home"
+                    android:layout_width="280dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/linear_telefone"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/p_saldo_shape_perfil"
@@ -128,6 +162,7 @@
                             android:layout_marginTop="10dp"
                             android:gravity="center"
                             android:text="23"
+                            android:fontFamily="sans-serif-light"
                             android:textColor="@android:color/white"
                             android:textSize="27dp"
                             android:textStyle="bold" />
@@ -138,6 +173,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/partidas_totais_txt_perfil"
                             android:gravity="center"
+                            android:fontFamily="sans-serif-light"
                             android:text="partidas"
                             android:textSize="13dp" />
 
@@ -154,6 +190,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:gravity="center"
+                            android:fontFamily="sans-serif-light"
                             android:text="14"
                             android:textColor="@android:color/white"
                             android:textSize="27dp"
@@ -166,6 +203,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/partidas_totais_txt_perfil2"
                             android:gravity="center"
+                            android:fontFamily="sans-serif-light"
                             android:text="vitórias"
                             android:textSize="13dp" />
 
@@ -183,6 +221,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:gravity="center"
+                            android:fontFamily="sans-serif-light"
                             android:text="61%"
                             android:textColor="@android:color/white"
                             android:textSize="27dp"
@@ -194,6 +233,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/desempenho_txt_perfil2"
                             android:gravity="center"
+                            android:fontFamily="sans-serif-light"
                             android:text="desempenho"
                             android:textSize="13dp" />
 
@@ -203,86 +243,102 @@
 
             </RelativeLayout>
 
-            <LinearLayout
-                android:id="@+id/linear2"
-                android:layout_width="fill_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/icone_email_perfil"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_email_black_24dp" />
-
-                <TextView
-                    android:id="@+id/email_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:gravity="center"
-                    android:inputType="textMultiLine"
-                    android:text="elias.nunes2345@gmail.com"
-                    android:textIsSelectable="true"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linear3"
-                android:layout_width="fill_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/icone_telefone_perfil"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_phone_black_24dp" />
-
-                <TextView
-                    android:id="@+id/telefone_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:gravity="center"
-                    android:text="(21)989238494"
-                    android:textIsSelectable="true"
-                    android:textSize="16dp" />
-
-            </LinearLayout>
-
             <Button
-                android:id="@+id/btn_editar_perfil"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginHorizontal="100dp"
-                android:layout_marginTop="15dp"
+                android:id="@+id/btn_editar_prefil"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/btn_shape1"
+                android:fontFamily="sans-serif"
+
                 android:text="Editar perfil"
-                android:textAllCaps="false" />
+                android:textColor="@color/colorBack1"
+                android:textSize="12dp"
+                />
+
+
 
             <TextView
                 android:id="@+id/txt_meu_evento"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="110dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="25dp"
                 android:gravity="center"
+                android:textColor="@android:color/white"
+                android:fontFamily="sans-serif-light"
                 android:text="Meu evento"
                 android:textSize="27dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginHorizontal="25dp"
+                android:background="@drawable/p_saldo_shape_perfil"
+                android:layout_marginBottom="200dp"
+                >
+
+                <ImageView
+                    android:id="@+id/imagem_meu_evento_perfil"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/shrek1"
+                    />
+
+                <TextView
+                    android:id="@+id/nome_meu_evento_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="105dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center|start"
+                    android:inputType="textMultiLine"
+                    android:textStyle="bold"
+                    android:text="Usina 2.0"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/data_meu_evento_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_below="@id/imagem_meu_evento_perfil"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:inputType="textMultiLine"
+                    android:text="22/04"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/horario_meu_evento_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/nome_meu_evento_txt"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:inputType="textMultiLine"
+                    android:text="9:00"
+                    android:textSize="25dp" />
+
+
+
+
+
+            </RelativeLayout>
+
 
 
         </LinearLayout>

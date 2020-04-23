@@ -12,9 +12,9 @@
         android:id="@+id/edt_usuario_cadastro"
         android:layout_width="300dp"
         android:layout_height="77dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/edt_txt_format1"
         android:ems="10"
+        android:fontFamily="sans-serif-light"
         android:gravity="start|center"
         android:hint="Usuario"
         android:inputType="textPersonName"
@@ -22,19 +22,19 @@
         android:textColor="@color/colorLight"
         android:textColorHint="@color/colorLight"
         android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/edt_senha_cadastro"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_bemvindo_cadastro"
+        app:layout_constraintVertical_bias="0.06" />
 
     <EditText
         android:id="@+id/edt_senha_cadastro"
         android:layout_width="300dp"
         android:layout_height="77dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/edt_txt_format1"
         android:ems="10"
+        android:fontFamily="sans-serif-light"
         android:gravity="start|center"
         android:hint="Senha"
         android:inputType="textPassword"
@@ -42,19 +42,19 @@
         android:textColor="@color/colorLight"
         android:textColorHint="@color/colorLight"
         android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/edt_confirmaSenha_cadastro"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_bemvindo_cadastro"
+        app:layout_constraintVertical_bias="0.27" />
 
     <EditText
         android:id="@+id/edt_confirmaSenha_cadastro"
         android:layout_width="300dp"
         android:layout_height="77dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/edt_txt_format1"
         android:ems="10"
+        android:fontFamily="sans-serif-light"
         android:gravity="start|center"
         android:hint="Confirmar senha"
         android:inputType="textPassword"
@@ -62,11 +62,11 @@
         android:textColor="@color/colorLight"
         android:textColorHint="@color/colorLight"
         android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/edt_email_cadastro"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_bemvindo_cadastro"
+        app:layout_constraintVertical_bias="0.48" />
 
     <EditText
         android:id="@+id/edt_email_cadastro"
@@ -74,6 +74,7 @@
         android:layout_height="77dp"
         android:background="@drawable/edt_txt_format1"
         android:ems="10"
+        android:fontFamily="sans-serif-light"
         android:gravity="start|center"
         android:hint="Email"
         android:inputType="textEmailAddress"
@@ -81,11 +82,11 @@
         android:textColor="@color/colorLight"
         android:textColorHint="@color/colorLight"
         android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_cadastrar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.798" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_bemvindo_cadastro"
+        app:layout_constraintVertical_bias="0.69" />
 
     <Button
         android:id="@+id/btn_cadastrar"
@@ -93,13 +94,14 @@
         android:layout_height="60dp"
         android:background="@drawable/btn_shape1"
         android:text="Cadastrar"
+        android:fontFamily="sans-serif"
         android:textColor="@color/colorBack1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.956" />
+        app:layout_constraintVertical_bias="0.976" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -152,42 +154,40 @@
         android:id="@+id/btn_cadastro_to_login"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
-        app:layout_constraintBottom_toTopOf="@+id/edt_usuario_cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt_condicao_cadastro"
         android:layout_width="265dp"
         android:layout_height="51dp"
+        android:fontFamily="sans-serif-light"
         android:text="Certifique-se que seu usuário e senha possuam de 4 a 18 caracteres e não possuam caracteres inválidos"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_email_cadastro"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/txt_bemvindo_cadastro"
         android:layout_width="223dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-light"
         android:gravity="center"
         android:text="Crie sua conta"
         android:textSize="32dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/edt_usuario_cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/anim_edt_usuario_cadastro"

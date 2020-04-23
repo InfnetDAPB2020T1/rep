@@ -2,6 +2,7 @@ package com.example.projpaint3.FragmentsInicial
 
 import android.opengl.Visibility
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -68,7 +69,20 @@ class CadastroFragment : Fragment() {
 
                 usuarioViewModel_cadastro.usuario = usuario
 
-                findNavController().navigate(R.id.action_cadastroFragment_to_loginFragment)
+                Toast.makeText(activity!!.baseContext,"Cadastro Realizado",Toast.LENGTH_SHORT).show()
+
+                object : CountDownTimer(1000,250){
+                    override fun onFinish() {
+
+                        findNavController().navigate(R.id.action_cadastroFragment_to_loginFragment)
+
+                    }
+                    override fun onTick(millisUntilFinished: Long) {
+                    }
+
+                }.start()
+
+
             }
 
 

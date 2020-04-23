@@ -28,7 +28,7 @@ class Perfil_HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btn_editar_perfil.setOnClickListener{
+        btn_editar_prefil.setOnClickListener{
             findNavController().navigate(R.id.action_perfil_HomeFragment_to_perfil_EditFragment)
         }
 

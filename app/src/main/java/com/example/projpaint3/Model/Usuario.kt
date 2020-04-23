@@ -19,7 +19,7 @@ class Usuario(
     var telefone : String? = null,
     var partidas_ganhas : Int? = null,
     var partidas_perdidas : Int? = null,
-    var evento_criado : Boolean = false
+    var evento : Evento? = null
 
 ) : Serializable {
     init {
