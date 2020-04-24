@@ -21,8 +21,8 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btn_nav_app"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/btn_nav_format"
+        android:layout_height="65dp"
+        android:background="@color/colorBack1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

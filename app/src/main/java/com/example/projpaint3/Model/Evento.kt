@@ -11,5 +11,6 @@ class Evento(
     var time_B : MutableList<Usuario>,
     var host : Usuario,
     var data : Date,
-    var duracao : Time
+    var horario_inicio : Time,
+    var horario_termino : Time
 )

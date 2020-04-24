@@ -13,6 +13,7 @@ class Usuario(
     var nome : String,
     var senha : String,
     var email : String,
+    var nivel : Int = 1,
     var localidade : String? = null,
     var sobre : String? = null,
     var icone : Int? = null,
