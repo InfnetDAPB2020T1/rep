@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_centerHorizontal="true"
+    android:layout_marginHorizontal="50dp"
+    android:layout_width="match_parent" android:layout_height="200dp">
+
+    <RelativeLayout
+        android:id="@+id/rlt_lyo_titulo_evento"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/btn_shape2"
+        >
+
+        <TextView
+            android:id="@+id/evento_nome_txt"
+            android:layout_marginStart="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/evento_local_txt"
+            android:text="Usina 2.0"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-light"
+            />
+
+        <TextView
+            android:id="@+id/evento_local_txt"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorLight"
+            android:text="Usina"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/back_evento_2"
+        android:layout_height="110dp"
+        android:layout_below="@id/rlt_lyo_titulo_evento"
+        >
+
+        <TextView
+            android:id="@+id/data_txt"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:fontFamily="sans-serif-light"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="Data : "
+            />
+
+        <TextView
+            android:id="@+id/data_evento_txt"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/data_txt"
+            android:fontFamily="sans-serif-light"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="27/05"
+            />
+
+        <TextView
+            android:id="@+id/horario_evento_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_below="@id/data_evento_txt"
+            android:fontFamily="sans-serif-light"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="9:00 - 12:00"
+            />
+
+        <RelativeLayout
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="25dp"
+            android:layout_alignParentEnd="true"
+            >
+
+            <TextView
+                android:id="@+id/participantes_evento_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:text="5"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/vagas_disponiveis_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@id/participantes_evento_txt"
+                android:text="vagas abertas"
+                android:textSize="16sp"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

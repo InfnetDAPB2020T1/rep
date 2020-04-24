@@ -12,5 +12,6 @@ class Evento(
     var host : Usuario,
     var data : Date,
     var horario_inicio : Time,
-    var horario_termino : Time
+    var horario_termino : Time,
+    var participantes_totais : Int
 )

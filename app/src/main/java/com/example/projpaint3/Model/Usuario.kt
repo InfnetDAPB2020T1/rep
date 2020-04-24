@@ -20,7 +20,8 @@ class Usuario(
     var telefone : String? = null,
     var partidas_ganhas : Int? = null,
     var partidas_perdidas : Int? = null,
-    var evento : Evento? = null
+    var meu_evento : Evento? = null,
+    var participante_eventos : MutableList<Evento>? = null
 
 ) : Serializable {
     init {
