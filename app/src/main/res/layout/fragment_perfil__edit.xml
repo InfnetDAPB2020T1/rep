@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBack1"
     tools:context=".FragmentsApp.Perfil.Perfil_EditFragment">
 
     <ScrollView
@@ -14,119 +15,180 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/edt_perfil"
-                android:layout_width="300dp"
-                android:layout_height="77dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="90dp"
-                android:background="@drawable/edt_txt_format1"
-                android:ems="10"
-                android:gravity="start|center"
-                android:hint="Nome"
-                android:inputType="textPersonName"
-                android:paddingLeft="50dp"
-                android:textColor="@color/colorLight"
-                android:textColorHint="@color/colorLight"
-                android:textSize="17dp" />
-
-            <EditText
-                android:id="@+id/edt_perfil2"
-                android:layout_width="300dp"
-                android:layout_height="77dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/edt_txt_format1"
-                android:ems="10"
-                android:gravity="start|center"
-                android:hint="Senha"
-                android:inputType="textPersonName"
-                android:paddingLeft="50dp"
-                android:textColor="@color/colorLight"
-                android:textColorHint="@color/colorLight"
-                android:textSize="17dp" />
-
-            <EditText
-                android:id="@+id/edt_perfil3"
-                android:layout_width="300dp"
-                android:layout_height="77dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/edt_txt_format1"
-                android:ems="10"
-                android:gravity="start|center"
-                android:hint="Email"
-                android:inputType="textPersonName"
-                android:paddingLeft="50dp"
-                android:textColor="@color/colorLight"
-                android:textColorHint="@color/colorLight"
-                android:textSize="17dp" />
-
-            <EditText
-                android:id="@+id/edt_perfil4"
-                android:layout_width="300dp"
-                android:layout_height="77dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/edt_txt_format1"
-                android:ems="10"
-                android:gravity="start|center"
-                android:hint="Telefone"
-                android:inputType="textPersonName"
-                android:paddingLeft="50dp"
-                android:textColor="@color/colorLight"
-                android:textColorHint="@color/colorLight"
-                android:textSize="17dp" />
-
-            <EditText
-                android:id="@+id/edt_perfil5"
-                android:layout_width="300dp"
-                android:layout_height="77dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/edt_txt_format1"
-                android:ems="10"
-                android:gravity="start|center"
-                android:hint="Localidade"
-                android:inputType="textPersonName"
-                android:paddingLeft="50dp"
-                android:textColor="@color/colorLight"
-                android:textColorHint="@color/colorLight"
-                android:textSize="17dp" />
-
-            <EditText
-                android:id="@+id/edt_perfil6"
-                android:lineSpacingExtra="4dp"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/edt_txt_format1"
-                android:ems="10"
-                android:paddingVertical="30dp"
-                android:gravity="start|center_horizontal"
-                android:hint="Sobre"
-                android:inputType="textMultiLine"
-                android:paddingHorizontal="50dp"
-                android:textColor="@color/colorLight"
-                android:textColorHint="@color/colorLight"
-                android:textSize="17dp" />
-
-            <Button
-                android:id="@+id/btn_confirmar_editar_perfil"
+            <TextView
+                android:id="@+id/perfil_edit_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginHorizontal="110dp"
-                android:layout_marginVertical="45dp"
-                android:text="Confirmar"
-                android:textStyle="bold"
-                android:textSize="16dp"
-                android:background="@drawable/btn_shape1"/>
+                android:paddingStart="30dp"
+                android:background="@color/colorBack1"
+                android:gravity="center_vertical"
+                android:fontFamily="sans-serif-light"
+                android:text="Edite seu perfil"
+                android:textColor="@android:color/white"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/escolha_seu_avatar_txt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorBack1"
+                android:gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:text="Escolha seu avatar"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlt_lyo_edt_perfil_ft_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/ft_edt_perfil_1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/perfil_icon_back"
+                    android:src="@drawable/avatar_1"
+                    />
+
+                <ImageView
+                    android:id="@+id/ft_edt_perfil_2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_toEndOf="@+id/ft_edt_perfil_1"
+                    android:background="@drawable/perfil_icon_back"
+                    android:src="@drawable/avatar_2" />
+
+                <ImageView
+                    android:id="@+id/ft_edt_perfil_3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_toEndOf="@+id/ft_edt_perfil_2"
+                    android:background="@drawable/perfil_icon_back"
+                    android:src="@drawable/avatar_3" />
+
+                <ImageView
+                    android:id="@+id/ft_edt_perfil_4"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_toEndOf="@id/ft_edt_perfil_3"
+                    android:background="@drawable/perfil_icon_back"
+                    android:src="@drawable/avatar_4" />
+
+                <ImageView
+                    android:id="@+id/ft_edt_perfil_5"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/ft_edt_perfil_1"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/perfil_icon_back"
+                    android:src="@drawable/avatar_5"
+                    />
+
+                <ImageView
+                    android:id="@+id/ft_edt_perfil_6"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/ft_edt_perfil_2"
+                    android:layout_toEndOf="@id/ft_edt_perfil_5"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/perfil_icon_back"
+                    android:src="@drawable/avatar_6"
+                    />
+
+                <ImageView
+                    android:id="@+id/ft_edt_perfil_7"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/ft_edt_perfil_3"
+                    android:layout_toEndOf="@id/ft_edt_perfil_6"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/perfil_icon_back"
+                    android:src="@drawable/avatar_7"
+                    />
+
+                <ImageView
+                    android:id="@+id/ft_edt_perfil_8"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/ft_edt_perfil_4"
+                    android:layout_toEndOf="@id/ft_edt_perfil_7"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/perfil_icon_back"
+                    android:src="@drawable/avatar_8"
+                    />
+
+                <ImageView
+                    android:id="@+id/ft_edt_perfil_9"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/ft_edt_perfil_5"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/perfil_icon_back"
+                    android:src="@drawable/avatar_9"
+                    />
+
+                <ImageView
+                    android:id="@+id/ft_edt_perfil_10"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/ft_edt_perfil_6"
+                    android:layout_toEndOf="@id/ft_edt_perfil_9"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/perfil_icon_back"
+                    android:src="@drawable/avatar_10"
+                    />
+
+                <ImageView
+                    android:id="@+id/ft_edt_perfil_11"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/ft_edt_perfil_7"
+                    android:layout_toEndOf="@id/ft_edt_perfil_10"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/perfil_icon_back"
+                    android:src="@drawable/avatar_11"
+                    />
+
+                <ImageView
+                    android:id="@+id/ft_edt_perfil_12"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/ft_edt_perfil_8"
+                    android:layout_toEndOf="@id/ft_edt_perfil_11"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/perfil_icon_back"
+                    android:src="@drawable/avatar_12"
+                    />
+            </RelativeLayout>
+
+            
+
+
+
 
         </LinearLayout>
 

@@ -57,9 +57,11 @@ class Perfil_HomeFragment : Fragment() {
             Usuario(9,"dgdh","qwert","biel@uakti.com", 2,"Leblon3","blablabla3")
         )
 
-        var evento = Evento(1,"Tijuquinha",local1,usuarios1,usuarios2,usuario_host, Date(2020,7,27), Time(12,45,0),Time(15,0,0),10)
+        var evento = Evento(1,"Tijuquinha",local1,usuarios1,usuarios2,usuario_host, Date(2020,7,27), Time(9,45,0),Time(12,0,0),10)
 
-        var eventos = mutableListOf(evento)
+        var evento2 = Evento(2,"Usina",local1,usuarios1,usuarios2,usuario_host, Date(2020,7,27), Time(12,45,0),Time(15,0,0),10)
+
+        var eventos = mutableListOf<Evento>(evento,evento2)
 
         rcy_meu_evento.adapter = EventoAdapter(eventos)
         rcy_meu_evento.layoutManager = LinearLayoutManager(activity!!.baseContext)
