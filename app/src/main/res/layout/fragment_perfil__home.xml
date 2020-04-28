@@ -8,8 +8,6 @@
     tools:context=".FragmentsApp.Perfil.Perfil_HomeFragment">
 
 
-
-
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_alignParentTop="true"
@@ -317,11 +315,10 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/btn_shape1"
-                android:fontFamily="sans-serif"
-                android:textAllCaps="false"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
                 android:text="Editar perfil"
-                android:textColor="@color/colorBack1"
-                android:textSize="16dp"
+                android:textSize="15dp"
                 />
 
             <ImageView
@@ -364,7 +361,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcy_meu_evento"
-                android:layout_marginBottom="100dp"
+                android:layout_marginBottom="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 

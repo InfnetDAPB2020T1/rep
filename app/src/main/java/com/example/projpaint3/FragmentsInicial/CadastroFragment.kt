@@ -62,9 +62,7 @@ class CadastroFragment : Fragment() {
                     senha = edt_senha_cadastro.text.toString(),
                     email = edt_email_cadastro.text.toString(),
                     telefone = null,
-                    icone = null,
-                    partidas_ganhas = null,
-                    partidas_perdidas = null
+                    icone = null
                 )
 
                 usuarioViewModel_cadastro.usuario = usuario
