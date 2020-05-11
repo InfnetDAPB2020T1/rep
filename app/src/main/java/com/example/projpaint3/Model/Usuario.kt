@@ -7,6 +7,8 @@ import com.example.projpaint3.Throws.UsuarioEmailException
 import com.example.projpaint3.Throws.UsuarioNomeException
 import com.example.projpaint3.Throws.UsuarioSenhaException
 import java.io.Serializable
+import java.math.RoundingMode
+import java.text.DecimalFormat
 import java.util.regex.Pattern
 
 //@Entity
@@ -37,8 +39,12 @@ class Usuario(
         if(!email.contains("@")) throw UsuarioEmailException()
     }
 
-    fun partidas_totais () : Int{
+    fun partidas_totais() : Int{
         return partidas_ganhas + partidas_perdidas
+    }
+
+    fun desempenho() : String{
+        return "%.0f".format((partidas_ganhas.toDouble() / partidas_totais().toDouble()) * 100) + "%"
     }
 }
 

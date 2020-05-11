@@ -12,19 +12,24 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@+id/btn_nav_app"
+        app:layout_constraintBottom_toTopOf="@+id/divisoria_editarP_meu_evento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_app" />
 
+    <ImageView
+        android:id="@+id/divisoria_editarP_meu_evento"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/p_saldo_shape_perfil"
+        app:layout_constraintBottom_toTopOf="@+id/btn_nav_app" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btn_nav_app"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:outlineAmbientShadowColor="@android:color/white"
-        android:outlineSpotShadowColor="@android:color/white"
         android:background="@color/colorBack1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -11,14 +11,14 @@ import com.example.projpaint3.R
 /**
  * A simple [Fragment] subclass.
  */
-class SobreFragment : Fragment() {
+class MeusEventosFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sobre, container, false)
+        return inflater.inflate(R.layout.fragment_meus_eventos, container, false)
     }
 
 }
