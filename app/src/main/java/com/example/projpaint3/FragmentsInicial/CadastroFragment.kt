@@ -40,6 +40,8 @@ class CadastroFragment : Fragment() {
         }
 
 
+
+
         btn_cadastrar.setOnClickListener {
 
             Verificar_Dados_Invalidos()

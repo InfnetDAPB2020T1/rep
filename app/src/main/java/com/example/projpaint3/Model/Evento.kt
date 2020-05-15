@@ -11,9 +11,10 @@ class Evento(
     var time_B : MutableList<Usuario>,
     var descricao : String,
     var host : Usuario,
-    var participantes_espera : MutableList<Usuario>,
     var data : Date,
     var horario_inicio : Time,
     var horario_termino : Time,
     var participantes_totais : Int
 )
+
+//tirar participantes espera

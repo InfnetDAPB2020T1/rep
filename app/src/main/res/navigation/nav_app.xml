@@ -25,8 +25,8 @@
         android:label="fragment_pesquisa"
         tools:layout="@layout/fragment_pesquisa" />
     <fragment
-        android:id="@+id/sobreFragment"
-        android:name="com.example.projpaint3.FragmentsApp.SobreFragment"
-        android:label="fragment_sobre"
-        tools:layout="@layout/fragment_sobre" />
+        android:id="@+id/meusEventosFragment"
+        android:name="com.example.projpaint3.FragmentsApp.MeusEventosFragment"
+        android:label="fragment_meus_eventos"
+        tools:layout="@layout/fragment_meus_eventos" />
 </navigation>

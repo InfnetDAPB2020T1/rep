@@ -39,6 +39,8 @@ class LoginFragment : Fragment() {
 
         anim_usuarioInvalido_login.isInvisible = true
 
+
+
         activity?.let{
             usuarioViewModel = ViewModelProviders.of(it).get(UsuarioViewModel::class.java)
         }

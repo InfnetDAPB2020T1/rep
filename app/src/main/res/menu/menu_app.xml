@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/meusEventosFragment"
+        android:title="Eventos"
+        android:icon="@drawable/ic_star_black2_24dp"
+        />
+
+    <item
         android:id="@+id/perfilFragment"
         android:title="Perfil"
         android:icon="@drawable/ic_person_black_24dp"

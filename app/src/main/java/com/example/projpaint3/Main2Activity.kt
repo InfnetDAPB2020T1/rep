@@ -19,7 +19,7 @@ class Main2Activity : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
 
-        var eventoViewModel = ViewModelProviders.of(this)[EventoViewModel::class.java]
+
 
         btn_nav_app.setupWithNavController(findNavController(R.id.nav_host_app))
 

@@ -12,20 +12,21 @@ import com.example.projpaint3.R
 import kotlinx.android.synthetic.main.activity_main2.view.*
 import kotlinx.android.synthetic.main.card_view_evento.view.*
 import java.text.SimpleDateFormat
+import android.content.Context
 import kotlin.time.minutes
 
-class EventoAdapter(var entidades : MutableList<Evento>) : RecyclerView.Adapter<EventoAdapter.EventoViewHolder>(){
+class EventoAdapter(var eventos : MutableList<Evento>) : RecyclerView.Adapter<EventoAdapter.EventoViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventoViewHolder {
         var view = LayoutInflater.from(parent.context).inflate(R.layout.card_view_evento,parent,false)
         return EventoViewHolder(view)
     }
 
-    override fun getItemCount(): Int = entidades.size
+    override fun getItemCount(): Int = eventos.size
 
     override fun onBindViewHolder(holder: EventoViewHolder, position: Int) {
-        holder.bind(entidades[position])
-        holder.onClick1(entidades[position])
+        holder.bind(eventos[position])
+        holder.onClick1(eventos[position])
     }
 
     inner class EventoViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
@@ -41,7 +42,7 @@ class EventoAdapter(var entidades : MutableList<Evento>) : RecyclerView.Adapter<
 
         fun onClick1(evento : Evento){
             itemView.setOnClickListener{
-                
+
             }
         }
     }
