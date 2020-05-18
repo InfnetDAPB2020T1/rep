@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:layout_marginBottom="7dp"
+    android:background="@drawable/time_a_back"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rlt_icone_timea"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@android:color/holo_blue_dark"
+        >
+
+        <ImageView
+            android:id="@+id/icone_usuario_timea"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/avatar_1"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/nome_usuario_timea"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="Elias123"
+        android:textSize="12dp"
+        android:fontFamily="sans-serif-light"
+        android:layout_centerVertical="true"
+        android:gravity="center|start"
+        android:paddingHorizontal="10dp"
+        android:layout_toEndOf="@+id/rlt_icone_timea"
+        />
+
+</RelativeLayout>

@@ -6,18 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.example.projpaint3.Adapter.EventoAdapter
-import com.example.projpaint3.Model.Evento
-import com.example.projpaint3.Model.Local
-import com.example.projpaint3.Model.Usuario
 
 import com.example.projpaint3.R
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_perfil__home.*
-import java.sql.Time
-import java.util.*
 
 /**
  * A simple [Fragment] subclass.
@@ -30,8 +21,6 @@ class Perfil_HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_perfil__home, container, false)
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

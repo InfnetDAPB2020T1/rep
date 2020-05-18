@@ -1,20 +1,22 @@
 package com.example.projpaint3.Model
 
+import java.io.Serializable
 import java.sql.Time
 import java.util.*
 
 class Evento(
     var id : Int,
     var nome : String,
-    var local : Local,
+    var local : String,
     var time_A : MutableList<Usuario>,
     var time_B : MutableList<Usuario>,
     var descricao : String,
     var host : Usuario,
-    var data : Date,
-    var horario_inicio : Time,
-    var horario_termino : Time,
-    var participantes_totais : Int
-)
+    var data : String,
+    var horario_inicio : String
+) : Serializable{
+    fun participantesTotais() : Int{
+        return time_A.size + time_B.size
+    }
+}
 
-//tirar participantes espera

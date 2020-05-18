@@ -100,7 +100,7 @@ class LoginFragment : Fragment() {
                     var intent = Intent(it, Main2Activity::class.java)
 
                     var usuario = Usuario(
-                        1,
+
                         usuarioViewModel.usuario!!.nome.toString(),
                         usuarioViewModel.usuario!!.senha.toString(),
                         usuarioViewModel.usuario!!.email.toString())

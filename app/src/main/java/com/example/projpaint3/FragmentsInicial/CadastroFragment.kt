@@ -59,12 +59,10 @@ class CadastroFragment : Fragment() {
                 }
 
                 var usuario = Usuario(
-                    id = 1,
                     nome = edt_usuario_cadastro.text.toString(),
                     senha = edt_senha_cadastro.text.toString(),
                     email = edt_email_cadastro.text.toString(),
-                    telefone = null,
-                    icone = null
+                    telefone = null
                 )
 
                 usuarioViewModel_cadastro.usuario = usuario

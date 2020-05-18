@@ -15,11 +15,6 @@
         android:label="fragment_evento"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/localFragment"
-        android:name="com.example.projpaint3.FragmentsApp.LocalFragment"
-        android:label="fragment_local"
-        tools:layout="@layout/fragment_local" />
-    <fragment
         android:id="@+id/pesquisaFragment"
         android:name="com.example.projpaint3.FragmentsApp.PesquisaFragment"
         android:label="fragment_pesquisa"
