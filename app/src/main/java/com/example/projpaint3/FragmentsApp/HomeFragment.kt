@@ -38,19 +38,19 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var usuarios = mutableListOf(
-            Usuario("elias","qwert","dsoaods",icone = 6),
-            Usuario("Roberto","qwert","dsoaods",icone = 8),
-            Usuario("ZE","qwert","dsoaods",icone = 9),
-            Usuario("Rodrigo","qwert","dsoaods",icone = 3))
+            Usuario("elias","qwert","dsoaods",icone = 6, nivel = 2),
+            Usuario("Roberto","qwert","dsoaods",icone = 8, nivel = 1),
+            Usuario("ZE","qwert","dsoaods",icone = 9, nivel = 2),
+            Usuario("Rodrigo","qwert","dsoaods",icone = 3, nivel = 3))
 
         var usuarios2 = mutableListOf(
-            Usuario("Mario","qwert","dsoaods",icone = 11),
-            Usuario("Biel","qwert","dsoaods",icone = 12),
-            Usuario("Robs","qwert","dsoaods",icone = 1),
-            Usuario("elias1","qwert","dsoaods",icone = 5),
-            Usuario("elias2","qwert","dsoaods",icone = 7),
-            Usuario("elias3","qwert","dsoaods",icone = 2),
-            Usuario("elias2","qwert","dsoaods",icone = 4))
+            Usuario("qpqpqpqpqpqpqpqpqp","qwert","dsoaods",icone = 11, nivel = 3),
+            Usuario("Biel","qwert","dsoaods",icone = 12, nivel = 2),
+            Usuario("Robs","qwert","dsoaods",icone = 1, nivel = 1),
+            Usuario("elias1","qwert","dsoaods",icone = 5, nivel = 2),
+            Usuario("elias2","qwert","dsoaods",icone = 7, nivel = 3),
+            Usuario("elias3","qwert","dsoaods",icone = 2, nivel = 3),
+            Usuario("elias2","qwert","dsoaods",icone = 4, nivel = 1))
 
         var evento1 = Evento(
             1,"Tijuquinha","Tijuca",usuarios,usuarios,

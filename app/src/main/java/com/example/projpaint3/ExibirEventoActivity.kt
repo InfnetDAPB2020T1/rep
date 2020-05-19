@@ -1,11 +1,13 @@
 package com.example.projpaint3
 
 import android.content.Intent
+import android.graphics.drawable.GradientDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projpaint3.Model.Evento
@@ -49,6 +51,7 @@ class ExibirEventoActivity : AppCompatActivity() {
                 fun bind(usuario : Usuario){
                     itemView.icone_usuario_timea.setImageResource(Repos().iconeIdToResource(usuario.icone))
                     itemView.nome_usuario_timea.text = usuario.nome
+                    itemView.nivel_usuario_timea.text = Repos().nivel_usuario_toString(usuario.nivel)
                 }
             }
         }
@@ -73,11 +76,17 @@ class ExibirEventoActivity : AppCompatActivity() {
                 fun bind(usuario : Usuario){
                     itemView.icone_usuario_timeb.setImageResource(Repos().iconeIdToResource(usuario.icone))
                     itemView.nome_usuario_timeb.text = usuario.nome
+                    itemView.nivel_usuario_timeb.text = Repos().nivel_usuario_toString(usuario.nivel)
                 }
             }
         }
 
         rcy_timeB_evento_exibir.adapter = TimeB_Adapter(evento.time_B)
         rcy_timeB_evento_exibir.layoutManager = LinearLayoutManager(this)
+
+        btn_voltar_evento_exibir.setOnClickListener {
+            var intent = Intent(this, Main2Activity ::class.java)
+            startActivity(intent)
+        }
     }
 }

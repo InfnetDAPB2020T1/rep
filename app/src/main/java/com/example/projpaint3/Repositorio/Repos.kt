@@ -21,4 +21,13 @@ class Repos{
             else -> return R.drawable.avatar_1
         }
     }
+
+    fun nivel_usuario_toString(nivel : Int) : String{
+        when(nivel){
+            1 -> return "Amador"
+            2 -> return "Intermediario"
+            3 -> return "Experiente"
+            else -> return "Amador"
+        }
+    }
 }
