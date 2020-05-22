@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBack1"
-    tools:context=".FragmentsApp.Perfil.Perfil_HomeFragment">
-
+    tools:context=".ExibirUsuarioActivity">
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollView3"
         android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -20,7 +19,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/perfil_home_toolbar"
+                android:id="@+id/perfil_home_toolbar_exibir_usuario"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:background="@color/colorBack1"
@@ -33,20 +32,20 @@
                 android:textStyle="bold" />
 
             <RelativeLayout
-                android:id="@+id/fundo_perfil"
+                android:id="@+id/fundo_perfil_exibir_usuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
 
                 <RelativeLayout
-                    android:id="@+id/rlt_lyo_ft_perfil_home"
+                    android:id="@+id/rlt_lyo_ft_perfil_home_exibir_usuario"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="0dp">
 
                     <RelativeLayout
-                        android:id="@+id/ft_perfil_lyo"
+                        android:id="@+id/ft_perfil_lyo_exibir_usuario"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginStart="30dp"
@@ -54,7 +53,7 @@
                         android:background="@drawable/perfil_icon_back" >
 
                         <ImageView
-                            android:id="@+id/ft_perfil"
+                            android:id="@+id/ft_perfil_exibir_usuario"
                             android:layout_marginHorizontal="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -64,12 +63,12 @@
                     </RelativeLayout>
 
                     <TextView
-                        android:id="@+id/nome_txt_perfil"
+                        android:id="@+id/nome_txt_perfil_exibir_usuario"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="30dp"
-                        android:layout_toEndOf="@+id/ft_perfil_lyo"
+                        android:layout_toEndOf="@+id/ft_perfil_lyo_exibir_usuario"
                         android:fontFamily="sans-serif-light"
                         android:gravity="center_horizontal"
                         android:text="Rb235"
@@ -78,12 +77,12 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/txt_localidade_perfil"
+                        android:id="@+id/txt_localidade_perfil_exibir_usuario"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignStart="@id/nome_txt_perfil"
+                        android:layout_alignStart="@id/nome_txt_perfil_exibir_usuario"
                         android:layout_gravity="center_horizontal"
-                        android:layout_below="@id/nome_txt_perfil"
+                        android:layout_below="@id/nome_txt_perfil_exibir_usuario"
                         android:fontFamily="sans-serif-light"
                         android:text="RJ, Botafogo"
                         android:textAlignment="center"
@@ -94,31 +93,31 @@
 
 
                 <ImageView
-                    android:id="@+id/divisoria_perfil_saldo"
+                    android:id="@+id/divisoria_perfil_saldo_exibir_usuario"
                     android:layout_marginTop="30dp"
                     android:layout_marginHorizontal="30dp"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:layout_below="@+id/rlt_lyo_ft_perfil_home"
+                    android:layout_below="@+id/rlt_lyo_ft_perfil_home_exibir_usuario"
                     android:src="@drawable/p_saldo_shape_perfil"/>
 
                 <RelativeLayout
-                    android:id="@+id/rlt_lyo_saldo_perfil_home"
+                    android:id="@+id/rlt_lyo_saldo_perfil_home_exibir_usuario"
                     android:layout_marginTop="5dp"
                     android:layout_width="300dp"
                     android:layout_height="70dp"
-                    android:layout_below="@id/divisoria_perfil_saldo"
+                    android:layout_below="@id/divisoria_perfil_saldo_exibir_usuario"
                     android:layout_centerHorizontal="true">
 
                     <RelativeLayout
-                        android:id="@+id/rlt_lyo_partidas_totais"
+                        android:id="@+id/rlt_lyo_partidas_totais_exibir_usuario"
                         android:layout_centerVertical="true"
                         android:layout_width="91dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp">
 
                         <TextView
-                            android:id="@+id/partidas_totais_txt_perfil"
+                            android:id="@+id/partidas_totais_txt_perfil_exibir_usuario"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
@@ -131,10 +130,10 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/partidas_totais_int_perfil"
+                            android:id="@+id/partidas_totais_int_perfil_exibir_usuario"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/partidas_totais_txt_perfil"
+                            android:layout_below="@id/partidas_totais_txt_perfil_exibir_usuario"
                             android:gravity="center"
                             android:fontFamily="sans-serif-light"
                             android:text="partidas"
@@ -143,14 +142,14 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/rlt_lyo_partidas_ganhas"
+                        android:id="@+id/rlt_lyo_partidas_ganhas_exibir_usuario"
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
                         android:layout_width="91dp"
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/partidas_ganhas_txt_perfil"
+                            android:id="@+id/partidas_ganhas_txt_perfil2_exibir_usuario"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
@@ -164,10 +163,10 @@
 
 
                         <TextView
-                            android:id="@+id/partidas_totais_int_perfil2"
+                            android:id="@+id/partidas_totais_int_perfil2_exibir_usuario"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/partidas_ganhas_txt_perfil"
+                            android:layout_below="@id/partidas_ganhas_txt_perfil2_exibir_usuario"
                             android:gravity="center"
                             android:fontFamily="sans-serif-light"
                             android:text="vitórias"
@@ -176,7 +175,7 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/rlt_lyo_desempenho"
+                        android:id="@+id/rlt_lyo_desempenho_exibir_usuario"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_width="91dp"
@@ -184,7 +183,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/desempenho_txt_perfil2"
+                            android:id="@+id/desempenho_txt_perfil2_exibir_usuario"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
@@ -197,10 +196,10 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/desempenho_int_perfil2"
+                            android:id="@+id/desempenho_int_perfil2_exibir_usuario"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/desempenho_txt_perfil2"
+                            android:layout_below="@id/desempenho_txt_perfil2_exibir_usuario"
                             android:gravity="center"
                             android:fontFamily="sans-serif-light"
                             android:text="desempenho"
@@ -211,18 +210,18 @@
                 </RelativeLayout>
 
                 <ImageView
-                    android:id="@+id/divisoria_saldo_sobre"
+                    android:id="@+id/divisoria_saldo_sobre_exibir_usuario"
                     android:layout_marginTop="10dp"
                     android:layout_marginHorizontal="30dp"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:layout_below="@+id/rlt_lyo_saldo_perfil_home"
+                    android:layout_below="@+id/rlt_lyo_saldo_perfil_home_exibir_usuario"
                     android:src="@drawable/p_saldo_shape_perfil"/>
 
                 <TextView
-                    android:id="@+id/txt_sobre_titulo"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@+id/divisoria_saldo_sobre"
+                    android:id="@+id/txt_sobre_titulo_exibir_usuario"
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@+id/divisoria_saldo_sobre_exibir_usuario"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:gravity="center"
@@ -233,12 +232,12 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txt_sobre_perfil"
+                    android:id="@+id/txt_sobre_perfil_exibir_usuario"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/txt_sobre_titulo"
+                    android:layout_below="@id/txt_sobre_titulo_exibir_usuario"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="15dp"
                     android:paddingHorizontal="20dp"
                     android:fontFamily="sans-serif-light"
                     android:text="Ola, meu nome é roberto e possuo alguma experiência no paintball"
@@ -247,26 +246,26 @@
 
 
                 <RelativeLayout
-                    android:id="@+id/rlt_lyo_nivel"
-                    android:layout_marginTop="15dp"
-                    android:layout_alignStart="@id/rlt_lyo_telefone"
-                    android:layout_below="@id/txt_sobre_perfil"
+                    android:id="@+id/rlt_lyo_nivel_exibir_usuario"
+                    android:layout_marginTop="25dp"
+                    android:layout_alignStart="@id/rlt_lyo_telefone_exibir_usuario"
+                    android:layout_below="@id/txt_sobre_perfil_exibir_usuario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/icone_nivel"
+                        android:id="@+id/icone_nivel_exibir_usuario"
                         android:layout_width="20dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_star_black_24dp" />
 
                     <TextView
-                        android:id="@+id/txt_nivel"
+                        android:id="@+id/txt_nivel_exibir_usuario"
                         android:layout_marginStart="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
                         android:gravity="center"
-                        android:layout_toRightOf="@id/icone_nivel"
+                        android:layout_toRightOf="@id/icone_nivel_exibir_usuario"
                         android:fontFamily="sans-serif-light"
                         android:textSize="20sp"
                         android:textColor="@android:color/white"
@@ -276,27 +275,27 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/rlt_lyo_telefone"
-                    android:layout_marginTop="15dp"
+                    android:id="@+id/rlt_lyo_telefone_exibir_usuario"
+                    android:layout_marginTop="25dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_below="@id/rlt_lyo_nivel"
+                    android:layout_below="@id/rlt_lyo_nivel_exibir_usuario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/icone_telefone"
+                        android:id="@+id/icone_telefone_exibir_usuario"
                         android:layout_width="20dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_phone_black_24dp" />
 
                     <TextView
-                        android:id="@+id/txt_telefone"
+                        android:id="@+id/txt_telefone_exibir_usuario"
                         android:layout_marginStart="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
                         android:gravity="center"
                         android:textIsSelectable="true"
-                        android:layout_toRightOf="@id/icone_telefone"
+                        android:layout_toRightOf="@id/icone_telefone_exibir_usuario"
                         android:fontFamily="sans-serif-light"
                         android:textSize="20sp"
                         android:textColor="@android:color/white"
@@ -308,23 +307,14 @@
             </RelativeLayout>
 
             <Button
-                android:id="@+id/btn_editar_prefil"
-                android:layout_width="170dp"
-                android:layout_height="50dp"
+                android:id="@+id/btn_voltar_exibir_usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/btn_shape1"
-                android:fontFamily="sans-serif-light"
-                android:textStyle="bold"
-                android:text="Editar perfil"
-                android:textSize="15dp"
-                />
-
-
-
+                android:layout_marginTop="30dp"
+                android:text="voltar"/>
 
         </LinearLayout>
     </ScrollView>
-
 
 </RelativeLayout>

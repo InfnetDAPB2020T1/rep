@@ -18,5 +18,9 @@ class Evento(
     fun participantesTotais() : Int{
         return time_A.size + time_B.size
     }
+
+//    fun eventoConcluido() : Boolean{
+//        return
+//    }
 }
 

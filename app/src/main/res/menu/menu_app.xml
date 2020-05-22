@@ -7,26 +7,14 @@
         android:title="Perfil"
         android:icon="@drawable/ic_person_black_24dp"
         />
-
     <item
         android:id="@+id/homeFragment"
         android:title="Home"
         android:icon="@drawable/ic_home_black_24dp"
         />
-
     <item
         android:id="@+id/meusEventosFragment"
         android:title="Eventos"
         android:icon="@drawable/ic_star_black2_24dp"
         />
-
-    <item
-        android:id="@+id/pesquisaFragment"
-        android:title="Busca"
-        android:icon="@drawable/ic_search_black_24dp"
-        />
-
-
-
-
 </menu>

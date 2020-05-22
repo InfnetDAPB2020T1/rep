@@ -25,6 +25,8 @@ class ExibirEventoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exibir_evento)
 
+
+
         var evento = intent.getSerializableExtra("evento") as Evento
 
         txt_nome_evento_exibir.setText(evento.nome.toString())
@@ -83,6 +85,18 @@ class ExibirEventoActivity : AppCompatActivity() {
 
         rcy_timeB_evento_exibir.adapter = TimeB_Adapter(evento.time_B)
         rcy_timeB_evento_exibir.layoutManager = LinearLayoutManager(this)
+
+        btnEntrarTimeA.setOnClickListener {
+            //if usuario nao esta em nenhuma lista, add na lista A
+            //else if usuario esta na listaA -> tira ele da lista A
+            // se ele esta na lista B -> tira ele da B e bota na A
+        }
+
+        btnEntrarTimeB.setOnClickListener {
+            //if usuario nao esta em nenhuma lista, add na lista B
+            //else if usuario esta na listaB -> tira ele da lista B
+            // se ele esta na lista A -> tira ele da A e bota na B
+        }
 
         btn_voltar_evento_exibir.setOnClickListener {
             var intent = Intent(this, Main2Activity ::class.java)

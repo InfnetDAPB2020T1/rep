@@ -6,13 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projpaint3.ExibirEventoActivity
+import com.example.projpaint3.ExibirUsuarioActivity
 import com.example.projpaint3.Model.Evento
 import com.example.projpaint3.Model.Usuario
 
 import com.example.projpaint3.R
+import com.example.projpaint3.Repositorio.Repos
+import kotlinx.android.synthetic.main.card_view_entidade.view.*
 import kotlinx.android.synthetic.main.card_view_evento.view.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.sql.Timestamp
@@ -67,38 +71,62 @@ class HomeFragment : Fragment() {
             "descrihguiuhihiuuhugvrdtgyuhijokoiutydrcao13wsda",Usuario("elias","elias",
                 "dasdsas",3), "7/2","10:00")
 
-        var lista_eventos : MutableList<Evento> = mutableListOf(evento1,evento2,evento3)
+        var elias = Usuario("elias","qwert","dsoaods",icone = 3, nivel = 2,localidade = "RJ,Rio de Janeiro",
+            sobre = "Ola meu nome e elias e sou um iniciante no paintball",telefone = "2199938493",partidas_perdidas = 10,
+            partidas_ganhas = 20)
+        var rodrigo = Usuario("Rodrigo","qwert","dsoaods",icone = 7, nivel = 2,localidade = "RJ,Rio de Janeiro",
+            sobre = "Ola meu nome e rodrigo e sou um iniciante no paintball",telefone = "21999342343",partidas_perdidas = 7,
+            partidas_ganhas = 30)
+        var Biel = Usuario("Biel","qwert","dsoaods",icone = 2, nivel = 2,localidade = "RJ,Rio de Janeiro",
+            sobre = "Ola meu nome e biel e sou um iniciante no paintball",telefone = "2199938493",partidas_perdidas = 2,
+            partidas_ganhas = 15)
 
-        class EventoHomeAdapter(var lista_eventos : MutableList<Evento>) : RecyclerView.Adapter<EventoHomeAdapter.EventoViewHolder>(){
+        var lista_eventos : MutableList<Any> = mutableListOf(evento1,elias,rodrigo,evento2,Biel,evento3)
 
-            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventoViewHolder {
-                var v = LayoutInflater.from(parent.context).inflate(R.layout.card_view_evento,parent,false)
-                return EventoViewHolder(v)
+        class EntidadeHomeAdapter(var entidades : MutableList<Any>) : RecyclerView.Adapter<EntidadeHomeAdapter.EntidadeViewHolder>(){
+
+            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EntidadeViewHolder {
+                var v = LayoutInflater.from(parent.context).inflate(R.layout.card_view_entidade,parent,false)
+                return EntidadeViewHolder(v)
             }
 
-            override fun getItemCount(): Int = lista_eventos.size
+            override fun getItemCount(): Int = entidades.size
 
-            override fun onBindViewHolder(holder: EventoViewHolder, position: Int) {
-                holder.bind(lista_eventos[position])
-                holder.onClickItem(lista_eventos[position])
+            override fun onBindViewHolder(holder: EntidadeViewHolder, position: Int) {
+                holder.bind(entidades[position])
+                holder.onClickItem(entidades[position])
             }
 
-            inner class EventoViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-                fun bind(evento : Evento){
+            inner class EntidadeViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+                fun bind(entidade : Any){
 
-                    itemView.evento_nome_txt.text = evento.nome
-                    itemView.evento_local_txt.text = evento.local
-                    itemView.data_evento_txt.text = evento.data
-                    itemView.horario_evento_txt.text = evento.horario_inicio
-                    itemView.participantes_evento_txt.text = evento.participantesTotais().toString()
-
+                    if (entidade is Usuario){
+                        itemView.txt_titulo_entidade_rcy.text = entidade.nome
+                        itemView.sub_titulo_entidade_rcy.setText("Perfil")
+                        itemView.entidade_icon_rcy.setImageResource(Repos().iconeIdToResource(entidade.icone))
+                    }
+                    else if(entidade is Evento){
+                        itemView.txt_titulo_entidade_rcy.text = entidade.nome
+                        itemView.sub_titulo_entidade_rcy.setText("Evento")
+                        itemView.entidade_icon_rcy.setImageResource(R.drawable.ic_star_black3_24dp)
+                        itemView.rlt_lyo_entidade_icon_rcy.setBackgroundResource(R.drawable.back_entidade_rcy_2)
+                    }
                 }
 
-                fun onClickItem(evento:Evento){
-                    itemView.setOnClickListener {
-                        var intent = Intent(this@HomeFragment.requireContext(),ExibirEventoActivity::class.java)
-                        intent.putExtra("evento", evento)
-                        startActivity(intent)
+                fun onClickItem(entidade : Any){
+                    if(entidade is Evento){
+                        itemView.setOnClickListener {
+                            var intent = Intent(this@HomeFragment.requireContext(),ExibirEventoActivity::class.java)
+                            intent.putExtra("evento", entidade)
+                            startActivity(intent)
+                        }
+                    }
+                    else if (entidade is Usuario){
+                        itemView.setOnClickListener {
+                            var intent = Intent(this@HomeFragment.requireContext(),ExibirUsuarioActivity::class.java)
+                            intent.putExtra("usuario", entidade)
+                            startActivity(intent)
+                        }
                     }
                 }
             }
@@ -107,7 +135,7 @@ class HomeFragment : Fragment() {
 
 
         rcy_home_eventos.layoutManager = LinearLayoutManager(activity!!.applicationContext)
-        rcy_home_eventos.adapter = EventoHomeAdapter(lista_eventos)
+        rcy_home_eventos.adapter = EntidadeHomeAdapter(lista_eventos)
 
     }
 }

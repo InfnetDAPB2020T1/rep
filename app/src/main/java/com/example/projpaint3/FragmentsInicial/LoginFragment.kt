@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import androidx.annotation.MainThread
 import androidx.core.view.isInvisible
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
@@ -66,6 +67,7 @@ class LoginFragment : Fragment() {
 
                 if(edt_usuario_login.text.toString() == nome && edt_senha_login.text.toString() == senha){
                     Usuario_Valido_Login()
+
                 }
                 else{
                     Usuario_Invalido_Login()

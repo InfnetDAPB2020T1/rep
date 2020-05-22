@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.projpaint3.Model.Usuario
 
 import com.example.projpaint3.R
+import com.example.projpaint3.Repositorio.Repos
 import kotlinx.android.synthetic.main.fragment_perfil__home.*
 
 /**
@@ -32,34 +34,18 @@ class Perfil_HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_perfil_HomeFragment_to_perfil_EditFragment)
         }
 
-//        var local1 = Local(1,"Tijuca","tijuca...","tijuca.com","9123120318")
-//
-//        var usuario_host = Usuario(1,"elias","qwert","elias@uakti.com", 2,"Leblon","blablabla", partidas_ganhas = 14, partidas_perdidas = 9)
-//
-//        desempenho_txt_perfil2.text = usuario_host.desempenho()
-//
-//        var usuarios1 = mutableListOf<Usuario>(
-//            Usuario(2,"rodrigo","qwert","rod@uakti.com", 2,"Leblon2","blablabla2"),
-//            Usuario(3,"biel","qwert","biel@uakti.com", 2,"Leblon3","blablabla3")
-//            )
-//
-//        var usuarios2 = mutableListOf<Usuario>(
-//            Usuario(4,"fjghjg","qwert","elias@uakti.com", 2,"Leblon","blablabla"),
-//            Usuario(5,"eqweqeq","qwert","rod@uakti.com", 2,"Leblon2","blablabla2"),
-//            Usuario(6,"biel","qwert","biel@uakti.com", 2,"Leblon3","blablabla3"),
-//            Usuario(7,"elsdaa","qwert","elias@uakti.com", 2,"Leblon","blablabla"),
-//            Usuario(8,"asdf","qwert","rod@uakti.com", 2,"Leblon2","blablabla2"),
-//            Usuario(9,"dgdh","qwert","biel@uakti.com", 2,"Leblon3","blablabla3")
-//        )
-//
-//        var evento = Evento(1,"Tijuquinha",local1,usuarios1,usuarios2,"descricao",usuario_host,usuarios1, Date(2020,7,27), Time(9,45,0),Time(12,0,0),10)
-//
-//        var evento2 = Evento(2,"Usina",local1,usuarios1,usuarios2,"descricao",usuario_host,usuarios1,  Date(2020,7,27), Time(12,45,0),Time(15,0,0),10)
-//
-//        var eventos = mutableListOf<Evento>(evento,evento2)
+        var usuario = Usuario("Roberto","qwerty","roberto@gmail.com",3,
+            sobre = "Ola meu nome eh roberto e sou avancado no paintball", icone = 7,telefone = "3192381102")
 
-//        rcy_meu_evento.adapter = EventoAdapter(eventos)
-//        rcy_meu_evento.layoutManager = LinearLayoutManager(activity!!.baseContext)
+        ft_perfil.setImageResource(Repos().iconeIdToResource(usuario.icone))
+        nome_txt_perfil.setText(usuario.nome)
+        txt_localidade_perfil.setText(usuario.localidade)
+        partidas_totais_txt_perfil.setText(usuario.partidas_totais().toString())
+        partidas_ganhas_txt_perfil.setText(usuario.partidas_ganhas.toString())
+        desempenho_txt_perfil2.setText(usuario.desempenho().toString())
+        txt_sobre_perfil.setText(usuario.sobre)
+        txt_nivel.setText(Repos().nivel_usuario_toString(usuario.nivel))
+        txt_telefone.setText(usuario.telefone)
 
     }
 }

@@ -18,14 +18,12 @@ class Usuario(
     var senha : String,
     var email : String,
     var nivel : Int = 1,
-    var localidade : String? = null,
-    var sobre : String? = null,
+    var localidade : String = "Localidade não registrada",
+    var sobre : String = "Sem descrição",
     var icone : Int = 1,
-    var telefone : String? = null,
+    var telefone : String = "Telefone não registrado",
     var partidas_ganhas : Int = 0,
-    var partidas_perdidas : Int = 0,
-    var meu_evento : Evento? = null,
-    var participante_eventos : MutableList<Evento>? = null
+    var partidas_perdidas : Int = 0
 
 ) : Serializable {
 //    init {

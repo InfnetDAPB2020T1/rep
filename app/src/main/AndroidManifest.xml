@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ExibirEventoActivity"></activity>
+        <activity android:name=".ExibirUsuarioActivity"></activity>
+        <activity android:name=".ExibirEventoActivity" />
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
