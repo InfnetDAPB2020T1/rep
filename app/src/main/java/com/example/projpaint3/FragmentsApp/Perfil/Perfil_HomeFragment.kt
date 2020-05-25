@@ -35,7 +35,7 @@ class Perfil_HomeFragment : Fragment() {
         }
 
         var usuario = Usuario("Roberto","qwerty","roberto@gmail.com",3,
-            sobre = "Ola meu nome eh roberto e sou avancado no paintball", icone = 7,telefone = "3192381102")
+            sobre = "Ola meu nome eh roberto e sou avancado no paintball", icone = 3,telefone = "3192381102",partidas_ganhas = 10,partidas_perdidas = 5)
 
         ft_perfil.setImageResource(Repos().iconeIdToResource(usuario.icone))
         nome_txt_perfil.setText(usuario.nome)

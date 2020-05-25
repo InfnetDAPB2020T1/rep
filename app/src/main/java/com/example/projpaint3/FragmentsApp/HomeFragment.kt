@@ -68,7 +68,7 @@ class HomeFragment : Fragment() {
 
         var evento3 = Evento(
             2,"Paintball26346","Barra",usuarios2,usuarios2,
-            "descrihguiuhihiuuhugvrdtgyuhijokoiutydrcao13wsda",Usuario("elias","elias",
+            "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",Usuario("elias","elias",
                 "dasdsas",3), "7/2","10:00")
 
         var elias = Usuario("elias","qwert","dsoaods",icone = 3, nivel = 2,localidade = "RJ,Rio de Janeiro",
@@ -133,9 +133,9 @@ class HomeFragment : Fragment() {
         }
 
 
-
         rcy_home_eventos.layoutManager = LinearLayoutManager(activity!!.applicationContext)
         rcy_home_eventos.adapter = EntidadeHomeAdapter(lista_eventos)
+
 
     }
 }

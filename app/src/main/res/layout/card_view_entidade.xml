@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/back_card_local"
-    android:layout_marginTop="25dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="10dp"
     >
 
     <RelativeLayout

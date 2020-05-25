@@ -27,8 +27,6 @@ class Perfil_EditFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_perfil__edit, container, false)
 
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
