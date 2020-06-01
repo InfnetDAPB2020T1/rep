@@ -1,5 +1,6 @@
 package com.example.projpaint3.FragmentsApp.Perfil
 
+import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -55,6 +56,15 @@ class Perfil_HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_perfil_HomeFragment_to_perfil_EditFragment)
         }
         busca().execute()
+
+        btn_logout.setOnClickListener {
+            startActivity(Intent(this.requireActivity(),MainActivity::class.java))
+            activity.let {
+                activity.let {
+                    it!!.finish()
+                }
+            }
+        }
 
 //        var firebaseFirestore = FirebaseFirestore.getInstance()
 //        var caminho = firebaseFirestore.collection("Usuarios")

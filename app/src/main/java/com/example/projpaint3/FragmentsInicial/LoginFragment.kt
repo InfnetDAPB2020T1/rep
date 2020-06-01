@@ -1,5 +1,6 @@
 package com.example.projpaint3.FragmentsInicial
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -17,9 +18,12 @@ import com.example.projpaint3.Main2Activity
 import com.example.projpaint3.Model.Usuario
 
 import com.example.projpaint3.R
+import com.example.projpaint3.Repositorio.Repos
 import com.example.projpaint3.ViewModel.UsuarioViewModel
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_login.*
+import java.io.File
+import java.io.FileOutputStream
 import java.lang.Exception
 
 /**
@@ -35,6 +39,8 @@ class LoginFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_login, container, false)
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,6 +48,12 @@ class LoginFragment : Fragment() {
 
         anim_usuarioInvalido_login.isInvisible = true
 
+        try {
+            edt_usuario_login.setText(LerArquivoEmailSenha()[0])
+            edt_senha_login.setText(LerArquivoEmailSenha()[1])
+        }
+        catch (e : Exception){
+        }
 
 
         activity?.let{
@@ -57,6 +69,8 @@ class LoginFragment : Fragment() {
 
 
 
+
+
         txt_cadastrar_login.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_cadastroFragment)
         }
@@ -67,7 +81,14 @@ class LoginFragment : Fragment() {
                     firebaseAuth.signInWithEmailAndPassword(edt_usuario_login.text.toString(),edt_senha_login.text.toString())
                         .addOnSuccessListener {
 
+                            RegistarLogin(
+                                edt_usuario_login.text.toString(),
+                                edt_senha_login.text.toString()
+                            )
+
                             Usuario_Valido_Login()
+
+
 
                         }
                         .addOnFailureListener{
@@ -76,7 +97,9 @@ class LoginFragment : Fragment() {
                         }
                 }
                 else{
+
                     Usuario_Invalido_Login()
+
                 }
 
         }
@@ -138,12 +161,18 @@ class LoginFragment : Fragment() {
 //                    intent.putExtra("usuario", usuario.toString())
                     startActivity(intent)
 
+                    activity.let {
+                        it!!.finish()
+                    }
+
                 }
             }
             override fun onTick(millisUntilFinished: Long) {
             }
 
         }.start()
+
+
     }
 
     fun Usuario_Invalido_Login(){
@@ -154,6 +183,47 @@ class LoginFragment : Fragment() {
         txt_usuario_invalido_login.startAnimation(anim1)
         anim_usuarioInvalido_login.playAnimation()
 
+    }
 
+    fun RegistarLogin(email : String, senha : String){
+
+        var lista : List<String> = listOf("","")
+
+        try {
+            var lista = LerArquivoEmailSenha()
+        }
+        catch (e : Exception){
+        }
+
+        if (email != lista[0] || senha != lista[1]){
+            EscreverArquivoEmailSenha(email, senha)
+        }
+
+    }
+
+    fun EscreverArquivoEmailSenha(email : String, senha : String){
+
+        activity.let {
+            it!!.openFileOutput("emailSenha.txt",Context.MODE_APPEND)
+                .bufferedWriter().use {
+                    it.appendln("${email},${senha}")
+                }
+        }
+    }
+
+    fun LerArquivoEmailSenha() : List<String>{
+
+        var emailSenha : String = ""
+
+        activity.let {
+            it!!.openFileInput("emailSenha.txt")
+                .bufferedReader().use {
+                    emailSenha = it.readLines().last()
+                }
+        }
+
+        val lista = emailSenha.split(",")
+
+        return lista
     }
 }

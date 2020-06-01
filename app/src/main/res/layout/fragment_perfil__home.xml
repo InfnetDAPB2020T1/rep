@@ -78,15 +78,28 @@
 
                     <TextView
                         android:id="@+id/txt_localidade_perfil"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_alignStart="@id/nome_txt_perfil"
                         android:layout_gravity="center_horizontal"
                         android:layout_below="@id/nome_txt_perfil"
                         android:fontFamily="sans-serif-light"
                         android:text="Localidade nao registrada"
-                        android:textAlignment="center"
+                        android:gravity="start"
                         android:textSize="12dp" />
+
+                    <Button
+                        android:id="@+id/btn_logout"
+                        android:layout_height="35dp"
+                        android:layout_width="70dp"
+                        android:text="Sair"
+                        android:textSize="12dp"
+                        android:background="@drawable/back_card_local"
+                        android:backgroundTint="@color/colorAccent3"
+                        android:textColor="@color/colorBack1"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="30dp"
+                        />
 
                 </RelativeLayout>
 
@@ -308,15 +321,15 @@
 
             <Button
                 android:id="@+id/btn_editar_prefil"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/btn_shape1"
                 android:fontFamily="sans-serif-light"
                 android:textStyle="bold"
                 android:text="Editar perfil"
-                android:textSize="15dp"
+                android:textSize="12dp"
                 />
 
 

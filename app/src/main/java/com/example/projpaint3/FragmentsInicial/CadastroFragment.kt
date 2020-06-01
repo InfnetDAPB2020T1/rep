@@ -28,6 +28,7 @@ class CadastroFragment : Fragment() {
 
     private lateinit var usuarioViewModel_cadastro : UsuarioViewModel
     lateinit var firebaseFirestore : FirebaseFirestore
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -148,7 +149,9 @@ class CadastroFragment : Fragment() {
         return !(palavra.contains(";")||palavra.contains(".")||
                 palavra.contains(",")|| palavra.contains(" ")||
                 palavra.contains("!")|| palavra.contains("?")||
-                palavra.contains(":")|| !((palavra.length>=4) && (palavra.length <=18))
+                palavra.contains("/")|| !((palavra.length>=4) && (palavra.length <=18))
                 )
     }
+
+
 }

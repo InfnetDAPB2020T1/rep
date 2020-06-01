@@ -46,7 +46,7 @@ class Perfil_EditFragment : Fragment() {
         }
         var imagem_selecionada = usuarioViewModel.usuario!!.icone
 
-        var nivel_selecionado = usuarioViewModel.usuario!!.nivel
+        var nivel_selecionado = 1
         edt_localidade_perfil.setText(usuarioViewModel.usuario!!.localidade.toString())
         edt_nome_perfil.setText(usuarioViewModel.usuario!!.nome.toString())
         edt_sobre_perfil.setText(usuarioViewModel.usuario!!.sobre.toString())

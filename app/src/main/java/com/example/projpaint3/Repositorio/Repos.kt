@@ -2,6 +2,10 @@ package com.example.projpaint3.Repositorio
 
 import android.content.res.Resources
 import com.example.projpaint3.R
+import java.io.File
+import java.io.FileReader
+import java.io.FileWriter
+import java.lang.Exception
 
 class Repos{
     fun iconeIdToResource(iconeId : Int) : Int{
@@ -30,4 +34,7 @@ class Repos{
             else -> return "Amador"
         }
     }
+
+
+
 }
