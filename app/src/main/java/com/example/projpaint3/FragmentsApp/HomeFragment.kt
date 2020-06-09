@@ -11,8 +11,10 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projpaint3.API.ApiClient
 import com.example.projpaint3.ExibirEventoActivity
 import com.example.projpaint3.ExibirUsuarioActivity
+import com.example.projpaint3.Model.Clima
 import com.example.projpaint3.Model.Evento
 import com.example.projpaint3.Model.Usuario
 
@@ -24,6 +26,9 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.card_view_entidade.view.*
 import kotlinx.android.synthetic.main.card_view_evento.view.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.sql.Timestamp
 import java.text.SimpleDateFormat
 import java.time.Instant
@@ -49,6 +54,24 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        ApiClient.getClimaService().getRJ(
+        ).enqueue(
+            object : Callback<Clima> {
+                override fun onFailure(call: Call<Clima>, t: Throwable) {
+
+                }
+
+                override fun onResponse(call: Call<Clima>, response: Response<Clima>)
+                {
+                    val clima = response.body()
+                    txt_temp.setText("${clima?.results!!.temp.toString()}°")
+                }
+            })
+
+
+
+
         var firebaseAuth = FirebaseAuth.getInstance()
         firebaseAuth.currentUser
         Toast.makeText(context, firebaseAuth.currentUser!!.email.toString(), Toast.LENGTH_SHORT)

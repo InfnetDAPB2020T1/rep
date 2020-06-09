@@ -8,19 +8,42 @@
 
 
 
-    <TextView
+    <RelativeLayout
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentTop="true"
-        android:background="@color/colorBack1"
-        android:gravity="center_vertical"
-        android:paddingLeft="30dp"
-        android:fontFamily="sans-serif-light"
-        android:text="Home"
-        android:textColor="@android:color/white"
-        android:textSize="23sp"
-        android:textStyle="bold" />
+        android:background="@color/colorBack1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorBack1"
+            android:gravity="center_vertical"
+            android:paddingStart="30dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Home"
+            android:textColor="@android:color/white"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorBack1"
+            android:gravity="center_vertical"
+            android:paddingEnd="40dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Home"
+            android:textColor="@android:color/white"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
 
     <SearchView
         android:id="@+id/search_view_home"
