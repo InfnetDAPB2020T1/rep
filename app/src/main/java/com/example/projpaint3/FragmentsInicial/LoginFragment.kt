@@ -24,6 +24,10 @@ import com.example.projpaint3.Model.Usuario
 import com.example.projpaint3.R
 import com.example.projpaint3.Repositorio.Repos
 import com.example.projpaint3.ViewModel.UsuarioViewModel
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_login.*
 import retrofit2.Call
@@ -52,6 +56,7 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
 //        getClimaService().getRJ(
 //        ).enqueue(

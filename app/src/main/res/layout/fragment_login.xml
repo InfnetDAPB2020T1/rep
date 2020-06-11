@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@color/colorBack1"
     tools:context=".FragmentsInicial.LoginFragment">
 
@@ -183,6 +184,5 @@
         app:layout_constraintStart_toEndOf="@+id/anim_usuarioInvalido_login"
         app:layout_constraintTop_toBottomOf="@+id/edt_senha_login"
         app:layout_constraintVertical_bias="0.533" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
